@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+<h2>Blood Bank List</h2>
+            <table class="table table-striped "> 
+                <tr>
+                   
+                    <th>Blood Bank Name</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Contact</th>
+                    <th>Email</th>
+                    <th>Contact Person</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+                {% for i in bbform %}
+               <tr>
+                    
+                    <td>{{ i.bbname }}</td>
+                    <td>{{ i.address }}</td>
+                    <td>{{ i.city }}</td>
+                    <td>{{ i.contact }}</td>
+                    <td>{{ i.email }}</td>
+                    <td>{{ i.contactPerson }}</td>
+                    <td><a href="{% url 'updatebb' pk=i.bloodbankid %}"><button class="btn btn-primary">Update</button></a></td>
+                    <td><a href="{% url 'deletebb' pk=i.bloodbankid %}"><button class="btn btn-danger">Delete</button></a></td>
+                
+                </tr>
+                
+                {% endfor %}
+            </table>
+{% endblock body %}

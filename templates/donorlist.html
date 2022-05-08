@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block body %}
+    <table class="table table-striped ">
+        <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>Bloodgroup</th>
+            <th>Blood Bank ID</th>
+            <th>Blood Bank Name</th>
+            <th>Contact Person</th>
+            <th>Blood Bank Contact</th>
+        </tr>
+        {% for i in mydata %}
+        <tr>
+            <td>{{ i.dname }}</td>
+            <td>{{ i.city }}</td>
+            <td>{{ i.bloodgroup }}</td>
+            <td>{{ i.bloodbankid }}</td> 
+            <td>{{ i.bloodbankid.bbname }}</td> 
+            <td>{{ i.bloodbankid.contactPerson }}</td> 
+            <td>{{ i.bloodbankid.contact }}</td>  
+        </tr>
+        {% endfor %}
+
+{% endblock %}

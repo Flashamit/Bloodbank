@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+    <table class="table table-striped ">
+        <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>Bloodgroup</th>
+            <th>Blood Bank ID</th>
+        </tr>
+        {% for i in rform %}
+        <tr>
+            <td>{{ i.dname }}</td>
+            <td>{{ i.city }}</td>
+            <td>{{ i.bloodgroup }}</td>
+            <td>{{ i.bloodbankid }}</td>  
+        </tr>
+        {% endfor %}
+
+{% endblock %}

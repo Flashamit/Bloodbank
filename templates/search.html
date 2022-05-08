@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Search Page</title>
+
+        <style>
+            body{
+                background-image:linear-gradient(to right, skyblue,blue);
+            }
+            #bloodgroup{
+                position:absolute;
+                margin-top:-40px;
+                margin-left:180px;    
+                border:none;
+                width:80px;
+                height:30px
+            }
+            #sbloodg{
+                position:relative;
+                padding-left:20px;
+                font-size:18px;
+            }
+            #city{
+                position:absolute;
+                margin:-10px 0px 0px 20px;
+                width:300px;
+                height:30px;
+                border:none;    
+            }
+            #search{
+                position:absolute;
+                margin:60px 0px 0px 50px;
+                width:80px;
+                height:30px;
+                background-color: limegreen;
+                border:none;    
+
+            }
+            #scity{
+                position:relative;
+                padding-left:20px;
+                font-size:18px;
+
+        </style>
+    </head>
+    <body>
+        <h2>Search Blood Group and City</h2><hr>
+        
+        <form method="post">
+            {% csrf_token %}
+            <p id="sbloodg">Select Blood Group:</p><select id="bloodgroup" name='bg'>
+                <option></option>
+                <option>O+</option>
+                <option>O-</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+            </select>
+            <p id="scity">Select City:</p><input type="text" placeholder="Enter City" id="city" name='ct'/>
+                        <input type="submit" value="Search" id="search"/>
+        </form>
+    
+    </body>
+</html>

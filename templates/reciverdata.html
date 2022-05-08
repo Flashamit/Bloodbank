@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block body %}
+    <table class="table table-striped ">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Adrress</th>
+            <th>City</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Blood Group</th>
+            <th>Quantity</th>
+            <th>Beg No.</th>
+            <th>Request No.</th>
+            <th>Request Data</th>
+            <th>Hospital</th>
+            <th>Blood Bank ID</th>
+        </tr>
+        {% for i in mydata %}
+        <tr>
+            <td>{{ i.receiverid }}</td>
+            <td>{{ i.rcname }}</td>
+            <td>{{ i.address }}</td>
+            <td>{{ i.city }}</td>
+            <td>{{ i.email }}</td>
+            <td>{{ i.contact }}</td> 
+            <td>{{ i.bloodgroup }}</td> 
+            <td>{{ i.qty_req }}</td> 
+            <td>{{ i.alloted_bloodbagno }}</td> 
+            <td>{{ i.request_no }}</td>
+            <td>{{ i.request_dt }}</td>
+            <td>{{ i.hospital }}</td> 
+            <td>{{ i.bloodbankid}}</td>   
+        </tr>
+        {% endfor %}
+
+{% endblock %}

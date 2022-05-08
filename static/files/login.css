@@ -1,0 +1,59 @@
+body{
+    background-image:linear-gradient(to right, skyblue,blue);
+}
+#login{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 60px;
+    color:white;
+    margin:30px 0px 0px 830px;
+}
+#loginform{
+    margin:80px 0px 0px 800px;
+    font-size: 20px;
+    color:white;
+}
+#inuname{
+    margin:-10px 0px 0px 0px;
+    width:300px;
+    border-radius: 3px;
+    border:none;
+    height:30px;
+    font-size:15px;
+}
+#pass{
+    margin:30px 0px 0px 0px;
+}
+#inpass{
+    position:relative;
+    margin:10px 0px 0px 0px;
+    width:300px;
+    border-radius: 3px;
+    border:none;
+    height:30px;
+    font-size:15px;
+}
+#submit{
+  position: absolute;
+  margin-top:100px;
+  margin-left:-200px;
+  border:none;
+  width:100px;
+  height:30px; 
+  font-size:15px;
+}
+#submit:hover{
+    background-color:green;
+    color:white;
+}
+#calink{
+    position:absolute;
+    margin:150px 0px 0px 800px;
+    color:white;
+    text-decoration: none;
+}
+#calink{
+    position:absolute;
+    margin:150px 0px 0px 900px;
+    color:white;
+    text-decoration: none;
+}
